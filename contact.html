@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>Tech Store</title>
     
@@ -12,56 +13,30 @@
   </head>
   <body>
     <header>
-        <h1>Tech Store</h1>
-        <nav class="right">
-          <a href="index.html">Home</a>
-          <a href="">Shop</a>
-          <a href="contact.html">Contact Us</a>
-        </nav>
-        <input type="search" class="search_box" placeholder="Search...">
+      <h1>Tech Store</h1>
+      <nav>
+        <a class="nav_items" href="index.html">Home</a>
+        <a class="nav_items" href="">Shop</a>
+        <a class="nav_last" href="contact.html">Contact Us</a>
+        <input type="search" class="nav_items" placeholder="Search...">
+      </nav>
     </header>
-    <aside>
-      <h2>Shop By:</h2>
-      <section>
-        <h3>Category</h3>
-        <hr>
-        <ul>
-          <li>All Items</li>
-          <li>Cameras</li>
-          <li>Laptops</li>
-          <li>Phones</li>
-          <li>Accessories</li>
-          <li>Other</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Price ($)</h3>
-        <hr>
-        <ul>
-          <li>1-9</li>
-          <li>10-29</li>
-          <li>30-59</li>
-          <li>60-99</li>
-          <li>100+</li>
-        </ul>
-      </section>
-    </aside>
     <main>
       <h2>Contact Us:</h2>
       <!-- Contact Us Form -->
       <form action="" method="">
-        <div class="inline">
+
           <label for="name">Name: </lable>
           <input type="text" id="name" name="name" placeholder="Enter your name">
-        </div>
-        <div class="inline">
+
+
           <label for="email">Email: </label>
           <input type="email" id="email" placeholder="Enter your email">
-        </div>
-        <div class="inline">
+
+
           <label for="message">Message: </lable>
           <textarea cols="30" id="message" rows="5" placeholder="Enter your message"></textarea>
-        </div>
+
         <!-- subject for for older browsers -->
         <!-- <div>
           <label for="subject">Subject: </label>
@@ -77,7 +52,7 @@
             <option value="Other">Other</option>
           </select>
         </div> -->
-        <div class="inline">
+        <div>
           <label for="subject">Subject: </label>
           <input type="text" list="subjects" id="subject" placeholder="Enter your subject">
           <datalist id="subjects">
@@ -89,25 +64,29 @@
           </datalist>
         </div>
         <div>
-          <p>Subscribe to future offers by:</p>
-          <label for="newsletter">Newsletter</label>
-          <input type="checkbox" id="newsletter" name="subscribe" value="newsletter">
-          <label for="email_check">Email</label>
-          <input type="checkbox" id="email_check" name="subscribe" value="email">
-          <label for="post">Post</label>
-          <input type="checkbox" id="post" name="subscribe" value="post">
+          <p class="p-label">Subscribe to future offers by:</p>
+          <div class="linear-selector-box">
+            <input type="checkbox" name="subscribe" value="newsletter" id="subscribe-newsletter">
+            <label for="subscribe-newsletter">Newsletter</label>
+            <input type="checkbox" name="subscribe" value="email" id="subscribe-email">
+            <label for="subscribe-email">Email</label>
+            <input type="checkbox" name="subscribe" value="post" id="subscribe-post">
+            <label for="subscribe-post">Post</label>
+          </div>
         </div>
         <div>
-          <p>How would you like us to respond?</p>
-          <label for="phone_response">Phone</label>
-          <input type="radio" id="phone_response" name="response" value="phone">
-          <lable for="email_response">Email</lable>
-          <input type="radio" id="email_response" name="response" value="email">
+          <p class="p-label">How would you like us to respond?</p>
+          <div class="linear-selector-box">
+            <input type="radio" name="response" value="phone" id="response-phone">
+            <label for="response-phone">Phone</label>
+            <input type="radio" name="response" value="email" id="reponse-email">
+            <label for="reponse-email">Email</label>
+          </div>
         </div>
         <button type="submit">Submit</button>
       </form>
       <!-- add API key via .env once adding JS-->
-      <iframe
+      <!-- <iframe
         width="600"
         height="450"
         style="border:0"
@@ -115,7 +94,14 @@
         allowfullscreen
         src="https://www.google.com/maps/embed/v1/place?key=API_KEY
           &q=Space+Needle,Seattle+WA">
-      </iframe>
+      </iframe> -->
     </main>
+    <footer>
+      <nav>
+        <a class="nav_items" href="index.html">Home</a>
+        <a class="nav_items" href="">Shop</a>
+        <a class="nav_last" href="contact.html">Contact Us</a>
+      </nav> 
+    </footer>
   </body>
 </html>
